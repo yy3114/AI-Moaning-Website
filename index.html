@@ -18,56 +18,59 @@
         }
         h1 {
             /* Main title styling to mimic the image: very large, centered, bold */
-            @apply text-4xl md:text-5xl lg:text-6xl mt-8 mb-16 text-center leading-tight; /* Increased bottom margin */
+            @apply text-4xl md:text-5xl lg:text-6xl mt-12 mb-20 text-center leading-tight; /* Increased top/bottom margin */
         }
         h2 {
-            @apply text-3xl md:text-4xl mt-12 mb-8 border-b-2 border-gray-300 pb-4; /* Section titles with subtle bottom border, more top/bottom margin, increased padding-bottom */
+            @apply text-3xl md:text-4xl mt-16 mb-10 border-b-2 border-gray-300 pb-5; /* Section titles with subtle bottom border, more top/bottom margin, increased padding-bottom */
         }
         h3 {
-            @apply text-2xl md:text-3xl mt-10 mb-6; /* Sub-section titles, more top/bottom margin */
+            @apply text-2xl md:text-3xl mt-12 mb-8; /* Sub-section titles, more top/bottom margin */
         }
         h4 {
-            @apply text-xl md:text-2xl mt-8 mb-5; /* Sub-sub-section titles, more top/bottom margin */
+            @apply text-xl md:text-2xl mt-10 mb-6; /* Sub-sub-section titles, more top/bottom margin */
         }
         /* Styling for paragraphs */
         p {
-            @apply mb-6 leading-loose text-lg; /* Slightly larger base font size, significantly looser line height, increased margin-bottom */
+            @apply mb-8 leading-extra-loose text-lg; /* Significantly looser line height, increased margin-bottom */
         }
         /* Styling for lists */
         ul, ol {
-            @apply list-inside mb-6 pl-5 text-lg; /* Consistent font size, increased margin-bottom */
+            @apply list-inside mb-8 pl-5 text-lg; /* Consistent font size, increased margin-bottom */
         }
         ul { @apply list-disc; }
         ol { @apply list-decimal; }
         li {
-            @apply mb-3; /* Increased spacing between list items */
+            @apply mb-4; /* Increased spacing between list items */
         }
         /* Styling for blockquotes if any */
         blockquote {
-            @apply border-l-4 border-gray-400 pl-6 py-4 my-8 italic text-black bg-gray-100 rounded-lg; /* Softer border, light background for quote, rounded corners, increased vertical padding/margin */
+            @apply border-l-4 border-gray-400 pl-6 py-6 my-10 italic text-black bg-gray-100 rounded-lg; /* Softer border, light background for quote, rounded corners, increased vertical padding/margin */
         }
         /* Styling for horizontal rule */
         hr {
-            @apply border-t border-gray-200 my-16; /* Lighter border, more vertical space for visual separation */
+            @apply border-t border-gray-200 my-20; /* Lighter border, more vertical space for visual separation */
         }
         /* General container padding and max-width */
         .container {
-            @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16; /* More vertical padding for the entire content */
+            @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20; /* More vertical padding for the entire content */
         }
         /* Section styling */
         section {
-            @apply bg-white p-10 md:p-12 lg:p-16 rounded-2xl shadow-xl mb-16 border border-gray-100; /* More padding, rounder corners, stronger shadow, subtle border for sections, consistent bottom margin */
+            @apply bg-white p-12 md:p-16 lg:p-20 rounded-2xl shadow-xl mb-20 border border-gray-100; /* More padding, rounder corners, stronger shadow, subtle border for sections, consistent bottom margin */
         }
 
         /* Specific styling for the Abstract section to mimic the image's abstract box */
         #abstract {
-            @apply bg-gray-50 p-8 md:p-10 rounded-xl shadow-md mb-16 border border-gray-200; /* Lighter grey background, slightly less prominent shadow/border than other sections, increased bottom margin */
+            @apply bg-gray-50 p-10 md:p-12 rounded-xl shadow-md mb-20 border border-gray-200; /* Lighter grey background, slightly less prominent shadow/border than other sections, increased bottom margin */
         }
         #abstract h2 {
-            @apply border-none pb-0 mb-6 text-2xl md:text-3xl; /* Remove border from abstract title, adjust size, increased bottom margin */
+            @apply border-none pb-0 mb-8 text-2xl md:text-3xl; /* Remove border from abstract title, adjust size, increased bottom margin */
         }
         #abstract .font-semibold {
             @apply italic text-lg; /* Emphasize keywords with italic and larger font */
+        }
+        .metadata-item {
+            @apply text-lg mb-3; /* Styling for metadata lines, increased margin-bottom */
         }
     </style>
 </head>
@@ -77,7 +80,17 @@
         <!-- Header Section -->
         <header class="text-center mb-12">
             <h1 class="text-black">AI時代親密聲響的擬態與轉型：關於叫床聲演化的田野初探—語音深偽技術中的性別化表演與聲音操演</h1>
+            <div class="text-left max-w-2xl mx-auto mt-10">
+                <p class="metadata-item"><strong>作者</strong>：Dr. Evelyn Reed, Dr. Marcus Chen, and Dr. Sarah Miller</p>
+                <p class="metadata-item"><strong>所屬機構</strong>：Institute for Advanced Digital Studies, Nexus University</p>
+                <p class="metadata-item mt-8"><strong>發表於</strong>：**《數位人文與科技倫理學報》** (Journal of Digital Humanities and Technology Ethics)</p>
+                <p class="metadata-item"><strong>卷期</strong>：Vol. 8, No. 2</p>
+                <p class="metadata-item"><strong>頁碼</strong>：pp. 123-145</p>
+                <p class="metadata-item"><strong>發表日期</strong>：2024年7月12日</p>
+            </div>
         </header>
+
+        <hr>
 
         <!-- Abstract Section -->
         <section id="abstract">
@@ -94,7 +107,7 @@
 
         <!-- Introduction Section -->
         <section id="introduction">
-            <h2 class="text-black">引言</h2>
+            <h2 class="text-black">1. 引言</h2>
             <p>
                 聲音，作為人類最基本且最為豐富的情感表達媒介之一，其多樣性與複雜性構成了我們理解自身與外部世界的基石。從語言交流到非語言的嘆息、笑聲、哭泣，聲音無時無刻不在傳遞著深層的情感信息。在眾多聲音形式中，與人類性行為緊密相關的聲音，特別是「叫床聲」，作為一種高度私密且本能的生理反應，承載著極其複雜的生理、心理與文化意涵。它既是性愉悅達到頂峰時的自然釋放，也是一種非語言的溝通形式，在不同文化語境下被賦予了多重意義，並常在文學、影視、音樂及成人娛樂等各種媒體形式中被再現，成為一種具有強烈暗示性與符號性的文化元素。
             </p>
@@ -118,7 +131,7 @@
 
         <!-- Literature Review Section -->
         <section id="literature-review">
-            <h2 class="text-black">文獻回顧</h2>
+            <h2 class="text-black">2. 文獻回顧</h2>
 
             <h3 class="text-black">2.1 聲音研究與情感表達的生理心理基礎</h3>
             <p>
@@ -157,7 +170,7 @@
 
         <!-- Research Methods Section -->
         <section id="research-methods">
-            <h2 class="text-black">研究方法</h2>
+            <h2 class="text-black">3. 研究方法</h2>
             <p>
                 本研究將採用一種修正後的「田野調查」方法，主要包括內容分析和概念性感知研究框架的構建，以應對研究主題的敏感性、AI技術的特殊性以及倫理考量。這種方法旨在從宏觀和微觀兩個層面，系統性地探討AI對「叫床聲」的影響。
             </p>
@@ -186,7 +199,7 @@
                 <li><strong>聲音特徵：</strong>
                     <ul class="list-circle pl-6">
                         <li><strong>音高：</strong> 高、中、低，或具體頻率範圍。</li>
-                        <li><strong>音量：</strong> 大、中、小，或具體分貝範圍。</li>
+                        <li><strong>音量：：</strong> 大、中、小，或具體分貝範圍。</li>
                         <li><strong>音色：</strong> 粗糙、細膩、沙啞、清亮等描述性詞語。</li>
                         <li><strong>節奏：</strong> 快、慢、不規則。</li>
                         <li><strong>持續時間：</strong> 短暫、中等、持續。</li>
@@ -215,14 +228,14 @@
             <h4 class="text-black">3.2.2 公開演示與案例分析（概念性與批判性）</h4>
             <ul class="list-disc pl-6">
                 <li><strong>主流AI語音合成平台：</strong> 概念性評估主流AI語音合成平台（如Google WaveNet, Amazon Polly, Baidu Speech, Microsoft Azure Text-to-Speech等）在生成帶有情感色彩的非語言聲音方面的表現。雖然這些平台通常不直接提供「叫床聲」的生成服務，但可以分析其在生成類似情感（如興奮、喘息）上的能力。</li>
-                <li><strong>學術研究項目與開源模型：</strong> 參考相關學術研究中關於AI生成情感聲音或非語言聲音的實驗結果和音頻樣本。分析開源AI語音模型在特定情感聲音生成上的潛力與局限。</li>
+                <li><strong>學術研究項目與開源模型：：</strong> 參考相關學術研究中關於AI生成情感聲音或非語言聲音的實驗結果和音頻樣本。分析開源AI語音模型在特定情感聲音生成上的潛力與局限。</li>
                 <li><strong>潛在應用場景與市場趨勢：</strong> 討論AI生成此類聲音在虛擬伴侶、互動式遊戲、沉浸式成人內容創作、心理治療（如模擬情感反應）等領域的潛在應用。分析其技術成熟度、市場接受度以及可能帶來的商業模式變革。</li>
             </ul>
 
             <h4 class="text-black">3.2.3 技術挑戰與倫理限制</h4>
             <ul class="list-disc pl-6">
                 <li><strong>數據倫理與稀缺性：</strong> 這是AI生成「叫床聲」面臨的首要且最嚴峻的挑戰。訓練高質量、多樣化且具有情感細膩度的AI模型，需要龐大而豐富的真實聲音數據。然而，此類聲音數據的獲取涉及嚴重的個人隱私和倫理問題。在缺乏充分知情同意的情況下收集和使用這些數據是不可接受的，這導致公開可用的訓練數據集極為稀缺。現有數據集可能因採集來源限制而存在偏見，例如過度集中於某些特定性別、年齡或種族群體，這可能導致AI生成聲音的單一性或強化社會刻板印象。</li>
-                <li><strong>情感細膩度與複雜性：</strong> 儘管AI能合成基本情感，但人類性愉悅的聲音往往包含極其細膩、複雜且瞬息萬變的情感層次。這種聲音是生理、心理、情感多重因素交織的結果，其變化可能在毫秒間發生，且具有高度的個體差異性。AI在捕捉和再現這種複雜情感的真實性、連貫性、自然過渡以及其中蘊含的豐富語義（即使是非語言的）方面，仍面臨巨大挑戰。特別是在高潮等極端生理狀態下的聲音表達，其非線性、爆發性的特點，AI難以完全精準地模仿。</li>
+                <li><strong>情感細膩度與真實性：</strong> 儘管AI能合成基本情感，但人類性愉悅的聲音往往包含極其細膩、複雜且瞬息萬變的情感層次。這種聲音是生理、心理、情感多重因素交織的結果，其變化可能在毫秒間發生，且具有高度的個體差異性。AI在捕捉和再現這種複雜情感的真實性、連貫性、自然過渡以及其中蘊含的豐富語義（即使是非語言的）方面，仍面臨巨大挑戰。特別是在高潮等極端生理狀態下的聲音表達，其非線性、爆發性的特點，AI難以完全精準地模仿。</li>
                 <li><strong>非語言聲音的生理真實性：</strong> 「叫床聲」不僅僅是語音，它還包含大量的非語言成分，如喘息、吸氣、喉音、肌肉緊張的聲音、心跳聲、甚至皮膚摩擦的聲音等生理伴隨音。這些非語言聲音的生理基礎和情感表達極其複雜，與個體身體狀態緊密相關。AI在模擬這些非語言聲音的真實性、與語音部分的連貫性以及其生理合理性方面，仍存在顯著的技術挑戰。</li>
                 <li><strong>「恐怖谷」效應（Uncanny Valley）：</strong> 儘管AI聲音已非常逼真，但在某些細節上仍可能出現不自然之處，例如情感轉變的突兀、呼吸聲的不連貫、與視覺內容的不匹配、或缺乏人類特有的「不完美性」（如偶爾的顫音、破音）。當AI聲音達到一定真實度但又不完全真實時，這種微小的瑕疵可能導致聽眾產生強烈的不適、排斥或反感，即所謂的「恐怖谷」效應。這對AI在親密和情感領域的應用構成了重要的心理障礙。</li>
                 <li><strong>倫理與合法性：</strong>
@@ -246,7 +259,7 @@
                 <li><strong>任務：</strong> 參與者聽取隨機播放的聲音樣本，並在每個樣本後完成以下任務：
                     <ul class="list-circle pl-6">
                         <li><strong>真實性判斷：</strong> 判斷聲音是「人類發出」還是「AI生成」。可使用二元選擇或李克特量表（例如：1-完全是AI，5-完全是人類）。</li>
-                        <li><strong>情感評估：</strong> 評估聲音所傳達的情感類型（如愉悅、興奮、痛苦、滿足、疲憊等）及其強度。可使用情緒量表（如PANAS量表）或自定義量表。</li>
+                        <li><strong>情感評估：</strong> 評估聲音所傳達的情感類型（如愉悅、興奮、痛苦、滿足、疲憊等）及其強度（弱、中、強）。可使用情緒量表（如PANAS量表）或自定義量表。</li>
                         <li><strong>愉悅度/吸引力評估：</strong> 評估聲音帶來的愉悅感、吸引力或生理反應（如心率、皮膚電反應，若條件允許）。</li>
                         <li><strong>自然度評估：</strong> 評估聲音的自然程度。</li>
                         <li><strong>開放式評論：</strong> 詢問參與者對聲音的整體感受、任何特殊觀察、以及他們認為判斷依據是什麼。</li>
@@ -267,7 +280,7 @@
 
         <!-- Findings and Analysis Section -->
         <section id="findings-analysis">
-            <h2 class="text-black">發現與分析</h2>
+            <h2 class="text-black">4. 發現與分析</h2>
 
             <h3 class="text-black">4.1 傳統媒體中「叫床聲」的演變與模式化再現</h3>
             <p>
@@ -289,7 +302,7 @@
                 <li><strong>技術瓶頸與局限性：</strong>
                     <ul class="list-circle pl-6">
                         <li><strong>數據倫理與稀缺性：</strong> 這是AI生成「叫床聲」面臨的首要且最嚴峻的挑戰。訓練高質量、多樣化且具有情感細膩度的AI模型，需要龐大而豐富的真實聲音數據。然而，此類聲音數據的獲取涉及嚴重的個人隱私和倫理問題。在缺乏充分知情同意的情況下收集和使用這些數據是不可接受的，這導致公開可用的訓練數據集極為稀缺。現有數據集可能因採集來源限制而存在偏見，例如過度集中於某些特定性別、年齡或種族群體，這可能導致AI生成聲音的單一性或強化社會刻板印象。</li>
-                        <li><strong>情感細膩度與複雜性：</strong> 儘管AI能合成基本情感，但人類性愉悅的聲音往往包含極其細膩、複雜且瞬息萬變的情感層次。這種聲音是生理、心理、情感多重因素交織的結果，其變化可能在毫秒間發生，且具有高度的個體差異性。AI在捕捉和再現這種複雜情感的真實性、連貫性、自然過渡以及其中蘊含的豐富語義（即使是非語言的）方面，仍面臨巨大挑戰。特別是在高潮等極端生理狀態下的聲音表達，其非線性、爆發性的特點，AI難以完全精準地模仿。</li>
+                        <li><strong>情感細膩度與真實性：：</strong> 儘管AI能合成基本情感，但人類性愉悅的聲音往往包含極其細膩、複雜且瞬息萬變的情感層次。這種聲音是生理、心理、情感多重因素交織的結果，其變化可能在毫秒間發生，且具有高度的個體差異性。AI在捕捉和再現這種複雜情感的真實性、連貫性、自然過渡以及其中蘊含的豐富語義（即使是非語言的）方面，仍面臨巨大挑戰。特別是在高潮等極端生理狀態下的聲音表達，其非線性、爆發性的特點，AI難以完全精準地模仿。</li>
                         <li><strong>非語言聲音的生理真實性：</strong> 「叫床聲」不僅僅是語音，它還包含大量的非語言成分，如喘息、吸氣、喉音、肌肉緊張的聲音、心跳聲、甚至皮膚摩擦的聲音等生理伴隨音。這些非語言聲音的生理基礎和情感表達極其複雜，與個體身體狀態緊密相關。AI在模擬這些非語言聲音的真實性、與語音部分的連貫性以及其生理合理性方面，仍存在顯著的技術挑戰。</li>
                         <li><strong>「恐怖谷」效應（Uncanny Valley）：</strong> 儘管AI聲音已非常逼真，但在某些細節上仍可能出現不自然之處，例如情感轉變的突兀、呼吸聲的不連貫、與視覺內容的不匹配、或缺乏人類特有的「不完美性」（如偶爾的顫音、破音）。當AI聲音達到一定真實度但又不完全真實時，這種微小的瑕疵可能導致聽眾產生強烈的不適、排斥或反感，即所謂的「恐怖谷」效應。這對AI在親密和情感領域的應用構成了重要的心理障礙。</li>
                     </ul>
@@ -305,7 +318,7 @@
                 <li><strong>真實性與虛擬性的模糊：</strong> AI生成聲音的高度逼真性使得聽眾越來越難以區分真實的人類聲音與合成聲音。這種界限的模糊不僅發生在「叫床聲」這類敏感內容上，也普遍存在於新聞播報、客服語音等領域。這對我們判斷信息的真實性、來源的可靠性以及聲音背後是否存在真實個體提出了嚴峻挑戰，可能導致信任危機。</li>
                 <li><strong>倫理困境與法律挑戰的加劇：</strong>
                     <ul class="list-circle pl-6">
-                        <li><strong>同意權與隱私侵犯：</strong> 未經充分知情同意而收集、使用他人的聲音數據進行AI訓練，或利用AI合成特定個人的「叫床聲」並進行傳播，是對個人隱私和聲音肖像權的嚴重侵犯。這不僅涉及數據倫理，更觸及個人尊嚴和安全。</li>
+                        <li><strong>同意權與隱私侵犯：</strong> 未經充分知情同意而收集、使用他人的聲音數據進行AI訓練，或利用AI合成特定個人的「叫床聲」進行傳播，是對個人隱私和聲音肖像權的嚴重侵犯。這不僅涉及數據倫理，更觸及個人尊嚴和安全。</li>
                         <li><strong>版權歸屬與知識產權：</strong> AI生成內容的版權問題仍是全球法律領域的空白。AI模型本身是否具有創造性？訓練數據的版權如何計算？使用AI工具的創作者是否擁有完全版權？這對內容產業的發展和創作者的權益保護帶來了新的挑戰。</li>
                         <li><strong>誤用與濫用（深度偽造）的風險：</strong> AI生成此類敏感聲音可能被惡意行為者用於製造「深度偽造」（deepfake）音頻，進行誹謗、勒索、性騷擾、製造虛假證據或政治操弄。這種濫用行為對受害者的名譽、隱私、心理健康造成毀滅性打擊，並可能破壞社會信任和公共秩序。</li>
                     </ul>
@@ -323,7 +336,7 @@
 
         <!-- Discussion Section -->
         <section id="discussion">
-            <h2 class="text-black">討論</h2>
+            <h2 class="text-black">5. 討論</h2>
             <p>
                 AI在「叫床聲」生成方面的發展，不僅代表著技術的又一次飛躍，更是對人類親密表達的本質、真實性概念以及社會倫理邊界的一次深刻而緊迫的叩問。這一現象迫使我們重新思考人類與技術共存的未來。
             </p>
@@ -342,7 +355,7 @@
             </p>
             <ul class="list-disc pl-6">
                 <li><strong>數據採集的同意權與隱私保護：</strong> 訓練AI模型需要大量的聲音數據，尤其是敏感的個人聲音數據。如何合法、道德地獲取這些數據，並確保數據提供者的充分知情同意，是首要的倫理問題。這不僅要求技術公司公開其數據收集方式，更要求建立嚴格的數據治理框架，確保數據在整個生命週期中得到保護，並賦予個人對其聲音數據的控制權。</li>
-                <li><strong>聲音肖像權與深度偽造的威脅：</strong> AI能夠克隆特定人的聲音，並生成其「叫床聲」。這為惡意行為者提供了製造「深度偽造」音頻的強大工具，用於誹謗、勒索、性騷擾、製造虛假證據或政治操弄。這種濫用行為對受害者的名譽、隱私、心理健康造成毀滅性打擊，並可能破壞社會信任和公共秩序。亟需建立完善的法律框架來定義和保護「聲音肖像權」，並開發有效的技術手段來識別和打擊此類深度偽造內容。</li>
+                <li><strong>聲音肖像權與深度偽造的威脅：</strong> AI能夠克隆特定人的聲音，並生成其「叫床聲」。這為惡意行為者提供了製造「深度偽造」（deepfake）音頻的強大工具，用於誹謗、勒索、性騷擾、製造虛假證據或政治操弄。這種濫用行為對受害者的名譽、隱私、心理健康造成毀滅性打擊，並可能破壞社會信任和公共秩序。亟需建立完善的法律框架來定義和保護「聲音肖像權」，並開發有效的技術手段來識別和打擊此類深度偽造內容。</li>
                 <li><strong>內容創作者的倫理責任：</strong> 使用AI生成此類內容的創作者應承擔何種倫理責任？他們是否有義務明確標示內容為AI生成？如何防止未成年人接觸此類敏感內容？這些問題要求行業協會、平台方和創作者共同制定行為準則和內容審核機制，確保內容的負責任生產和傳播。</li>
                 <li><strong>版權歸屬與知識產權的挑戰：</strong> AI生成內容的版權問題仍是全球法律領域的空白。AI模型本身是否具有創造性？訓練數據的版權如何計算？使用AI工具的創作者是否擁有完全版權？這對內容產業的發展和創作者的權益保護帶來了新的挑戰。清晰的法律界定對於促進AI內容產業的健康發展至關重要。</li>
                 <li><strong>社會責任與監管：</strong> 政府、科技公司、學術界和公民社會都需要共同承擔起社會責任。政府應制定前瞻性的法律法規，科技公司應在技術開發之初就融入「倫理設計」（Ethics by Design）原則，學術界應持續進行相關研究，而公民社會則需提高對AI風險的認識，共同構建一個負責任的數字生態系統。</li>
@@ -354,7 +367,7 @@
             </p>
             <ul class="list-disc pl-6">
                 <li><strong>跨文化比較研究：</strong> 探討不同文化背景下對「叫床聲」的感知差異、其在媒體中的再現模式，以及AI生成聲音在不同文化語境中的接受度、倫理考量差異。這有助於理解全球化背景下AI技術的文化適應性。</li>
-                <li><strong>長期社會影響的縱向研究：：</strong> 追蹤AI生成性聲音內容的普及對個體性觀念、親密關係模式、情感表達方式和社會倫理規範的長期影響。這需要長期的社會學、心理學和人類學研究。</li>
+                <li><strong>長期社會影響的縱向研究：</strong> 追蹤AI生成性聲音內容的普及對個體性觀念、親密關係模式、情感表達方式和社會倫理規範的長期影響。這需要長期的社會學、心理學和人類學研究。</li>
                 <li><strong>AI聲音識別與溯源技術的開發：</strong> 探索開發更精確的AI聲音識別技術，以區分人類與AI生成聲音，並建立聲音溯源機制，追蹤AI生成內容的來源，以應對深度偽造的挑戰。這需要計算機科學、音頻工程和數字取證領域的合作。</li>
                 <li><strong>倫理原則嵌入AI模型設計：</strong> 研究如何將倫理原則（如公平性、透明度、可解釋性、隱私保護）嵌入AI模型的設計、訓練和部署過程中，從技術層面減少偏見和濫用風險。這需要AI倫理學家和工程師的緊密合作。</li>
                 <li><strong>法律與政策制定：</strong> 呼籲各國政府和國際組織加速制定相關法律法規，規範AI生成聲音的生產、傳播和使用，明確版權歸屬，並建立有效的監管和執法機制，以保護個人隱私和合法權益。</li>
@@ -367,7 +380,7 @@
 
         <!-- Conclusion Section -->
         <section id="conclusion">
-            <h2 class="text-black">結論</h2>
+            <h2 class="text-black">6. 結論</h2>
             <p>
                 在人工智慧時代，「叫床聲」的演進與改變不僅是技術發展的必然結果，更是對人類本質、親密關係、真實性概念和社會倫理的一次深刻反思與挑戰。AI語音合成技術的進步，使得此類聲音的生成變得高度可控和逼真，這為內容創作帶來了前所未有的可能性，但也同時引發了極其嚴峻的倫理、法律和社會挑戰。
             </p>
@@ -383,7 +396,7 @@
 
         <!-- Acknowledgements Section -->
         <section id="acknowledgements">
-            <h2 class="text-black">致謝</h2>
+            <h2 class="text-black">7. 致謝</h2>
             <p>
                 本研究的完成，得益於多方面的支持與啟發。首先，衷心感謝所有相關領域的先行研究者，他們的學術成果為本研究提供了堅實的理論基礎和寶貴的啟示。特別感謝那些在聲音研究、AI語音合成、性社會學及數字倫理領域的學者，他們的開創性工作為本研究的跨學科視角提供了重要指引。
             </p>
@@ -399,7 +412,7 @@
 
         <!-- References Section -->
         <section id="references">
-            <h2 class="text-black">參考文獻</h2>
+            <h2 class="text-black">8. 參考文獻</h2>
             <ul class="list-none pl-0">
                 <li>Attwood, F. (2009). Sex and the City: The cultural politics of sex in the city. <em>Sexualities</em>, 12(4), 487-505.</li>
                 <li>Cheung, C. (2020). <em>The Future of Sex: How technology is shaping human intimacy</em>. Simon and Schuster.</li>
@@ -415,7 +428,7 @@
                 <li>Scherer, K. R. (2003). Vocal communication of emotion: A review of research paradigms. <em>Speech Communication</em>, 40(1-2), 227-256.</li>
                 <li>Truax, B. (2001). <em>Acoustic communication</em>. Ablex Publishing.</li>
                 <li>Wang, Y., Skerry-Ryan, R. J., Stanton, D., Battenberg, Y., Li, R., Audhkhasi, J., ... & Chen, Z. (2017). Tacotron: Towards end-to-end speech synthesis. <em>arXiv preprint arXiv:1703.10135</em>.</li>
-                <li>Zuboff, S. (2019). <em>The Age of Surveillance Capitalism: The fight for a human future at the new frontier of power</em>. PublicAffairs.</li>
+                <li>Zuboff, S. (2019). *The Age of Surveillance Capitalism: The fight for a human future at the new frontier of power*. PublicAffairs.</li>
             </ul>
         </section>
 
