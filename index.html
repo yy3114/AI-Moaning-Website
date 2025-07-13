@@ -10,44 +10,64 @@
         /* Custom font for better readability */
         body {
             font-family: 'Inter', sans-serif;
-            @apply bg-gray-50 text-black; /* Light background, black text */
+            @apply bg-gray-100 text-black; /* Slightly darker grey background for better contrast with white sections, pure black text */
         }
         /* Styling for headings */
         h1, h2, h3, h4, h5, h6 {
-            @apply font-bold text-black mb-4; /* All headings black */
+            @apply font-bold text-black; /* All headings pure black */
         }
-        h1 { @apply text-4xl md:text-5xl lg:text-6xl mt-8; }
-        h2 { @apply text-3xl md:text-4xl mt-6; }
-        h3 { @apply text-2xl md:text-3xl mt-5; }
-        h4 { @apply text-xl md:text-2xl mt-4; }
+        h1 {
+            /* Main title styling to mimic the image: very large, centered, bold */
+            @apply text-4xl md:text-5xl lg:text-6xl mt-8 mb-16 text-center leading-tight; /* Increased bottom margin */
+        }
+        h2 {
+            @apply text-3xl md:text-4xl mt-12 mb-8 border-b-2 border-gray-300 pb-4; /* Section titles with subtle bottom border, more top/bottom margin, increased padding-bottom */
+        }
+        h3 {
+            @apply text-2xl md:text-3xl mt-10 mb-6; /* Sub-section titles, more top/bottom margin */
+        }
+        h4 {
+            @apply text-xl md:text-2xl mt-8 mb-5; /* Sub-sub-section titles, more top/bottom margin */
+        }
         /* Styling for paragraphs */
         p {
-            @apply mb-4 leading-relaxed;
+            @apply mb-6 leading-loose text-lg; /* Slightly larger base font size, significantly looser line height, increased margin-bottom */
         }
         /* Styling for lists */
         ul, ol {
-            @apply list-inside mb-4 pl-5;
+            @apply list-inside mb-6 pl-5 text-lg; /* Consistent font size, increased margin-bottom */
         }
         ul { @apply list-disc; }
         ol { @apply list-decimal; }
         li {
-            @apply mb-2;
+            @apply mb-3; /* Increased spacing between list items */
         }
         /* Styling for blockquotes if any */
         blockquote {
-            @apply border-l-4 border-blue-500 pl-4 py-2 my-4 italic text-black; /* Blockquote text black */
+            @apply border-l-4 border-gray-400 pl-6 py-4 my-8 italic text-black bg-gray-100 rounded-lg; /* Softer border, light background for quote, rounded corners, increased vertical padding/margin */
         }
         /* Styling for horizontal rule */
         hr {
-            @apply border-t border-gray-300 my-8;
+            @apply border-t border-gray-200 my-16; /* Lighter border, more vertical space for visual separation */
         }
         /* General container padding and max-width */
         .container {
-            @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
+            @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16; /* More vertical padding for the entire content */
         }
         /* Section styling */
         section {
-            @apply bg-white p-6 md:p-8 lg:p-10 rounded-xl shadow-lg mb-8;
+            @apply bg-white p-10 md:p-12 lg:p-16 rounded-2xl shadow-xl mb-16 border border-gray-100; /* More padding, rounder corners, stronger shadow, subtle border for sections, consistent bottom margin */
+        }
+
+        /* Specific styling for the Abstract section to mimic the image's abstract box */
+        #abstract {
+            @apply bg-gray-50 p-8 md:p-10 rounded-xl shadow-md mb-16 border border-gray-200; /* Lighter grey background, slightly less prominent shadow/border than other sections, increased bottom margin */
+        }
+        #abstract h2 {
+            @apply border-none pb-0 mb-6 text-2xl md:text-3xl; /* Remove border from abstract title, adjust size, increased bottom margin */
+        }
+        #abstract .font-semibold {
+            @apply italic text-lg; /* Emphasize keywords with italic and larger font */
         }
     </style>
 </head>
@@ -65,7 +85,7 @@
             <p>
                 本研究旨在深入探討在人工智慧（AI）技術日益普及的當代社會中，人類性表達中的一種特殊聲音形式——「叫床聲」——其生成、傳播與社會感知所經歷的深刻演變與變革。傳統上，「叫床聲」被視為一種本能的、非語言的生理反應，反映性愉悅或高潮時的自然流露，在人類親密關係、媒體再現及文化符號中佔據著獨特而敏感的位置。然而，隨著AI語音合成、深度學習、生成對抗網絡（GANs）及大型語言模型（LLMs）等內容生成技術的飛速發展，此類聲音的生成方式已不再局限於人類個體的真實發聲，而是能夠被AI以前所未有的真實度進行高度模擬、克隆乃至創造。本研究採用內容分析與概念性感知研究的綜合框架，首先回顧了不同歷史時期媒體中「叫床聲」的呈現模式及其社會文化建構，繼而深入分析了AI技術在模擬與合成此類聲音上的現有能力、技術瓶頸、潛在應用及其所引發的倫理困境。研究發現，AI的介入不僅模糊了真實與虛擬的界限，對聲音的真實性判斷、個體同意權、版權歸屬及社會倫理規範帶來了前所未有的挑戰，也促使我們重新審視人類親密表達的本質。本研究旨在為理解技術與人類親密表達的複雜互動提供一個多維度的初步視角，並呼籲學術界、業界及社會對相關倫理與社會影響進行更為深入和緊迫的跨學科探討。
             </p>
-            <p class="font-semibold mt-4">
+            <p class="font-semibold mt-4 italic">
                 關鍵詞：人工智慧；聲音研究；性表達；語音合成；深度偽造；倫理；媒體再現；親密關係
             </p>
         </section>
@@ -209,7 +229,7 @@
                     <ul class="list-circle pl-6">
                         <li><strong>數據採集與訓練的同意權：</strong> 如何確保用於訓練AI模型的聲音數據是經過充分知情同意的？未經同意使用他人聲音數據進行AI訓練，或利用AI合成特定個人的「叫床聲」進行傳播，是對個人隱私和聲音肖像權的嚴重侵犯。</li>
                         <li><strong>版權歸屬與知識產權：</strong> AI生成內容的版權問題仍是全球法律領域的空白。AI模型本身是否具有創造性？訓練數據的版權如何計算？使用AI工具的創作者是否擁有完全版權？這對內容產業的發展和創作者的權益保護帶來了新的挑戰。</li>
-                        <li><strong>誤用與濫用（深度偽造）的風險：</strong> AI生成此類敏感聲音可能被惡意行為者用於製造「深度偽造」（deepfake）音頻，進行誹謗、勒索、性騷擾、製造虛假證據、或在政治宣傳中進行操弄。這種濫用行為對受害者的名譽、隱私、心理健康造成毀滅性打擊，並可能破壞社會信任和公共秩序。</li>
+                        <li><strong>誤用與濫用（深度偽造）的風險：</strong> AI生成此類敏感聲音可能被惡意行為者用於製造「深度偽造」（deepfake）音頻，進行誹謗、勒索、性騷擾、製造虛假證據或政治操弄。這種濫用行為對受害者的名譽、隱私、心理健康造成毀滅性打擊，並可能破壞社會信任和公共秩序。</li>
                     </ul>
                 </li>
             </ul>
@@ -254,7 +274,7 @@
                 通過對不同年代媒體內容的初步分析（基於廣泛的媒體觀察、文獻回顧和常見媒體印象），可以觀察到「叫床聲」在媒體再現中的幾個顯著演變趨勢，這些趨勢反映了社會文化、技術進步和商業需求的複雜互動：
             </p>
             <ul class="list-disc pl-6">
-                <li><strong>從隱晦到外顯的表現：</strong> 在20世紀中葉及以前的電影和電視作品中，性行為及其相關聲音往往被極度隱晦化。通常通過暗示性的鏡頭（如特寫人物表情、熄燈、床單晃動）、背景音樂的烘托、或簡短的對白來暗示性行為的發生，而「叫床聲」則極少直接呈現，或僅以極為模糊、非具體的呻吟聲出現。這種處理方式與當時社會對性的保守態度和嚴格的審查制度密切相關。隨著20世紀後期社會對性話題的逐漸開放，以及電影分級制度的完善，特別是成人娛樂產業的興起，此類聲音的呈現變得更加直接和具體。例如，在R級或NC-17級電影中，性場景的聲音表現會更加豐富和寫實。</li>
+                <li><strong>從隱晦到外顯的表現：</strong> 在20世紀中葉及以前的電影和電視作品中，性行為及其相關聲音往往被極度隱晦化。通常通過暗示性的鏡頭（如特寫人物表情、熄燈、床單晃動）、背景音樂的烘托、或簡短的對白來暗示性行為的發生，而「叫床聲」則極少直接呈現，或僅以極為模糊、非具體的呻吟聲出現。這種處理方式與當時社會對性的保守態度和嚴格的審查制度密切相關。隨著20世紀後期對性話題的逐漸開放，以及電影分級制度的完善，特別是成人娛樂產業的興起，此類聲音的呈現變得更加直接和具體。例如，在R級或NC-17級電影中，性場景的聲音表現會更加豐富和寫實。</li>
                 <li><strong>從真實到表演化與模式化：</strong> 儘管「叫床聲」源於人類的生理反應，但媒體中的「叫床聲」絕大多數是經過專業演員表演和後期製作的。演員會根據劇本、導演要求和角色設定進行表演，有時甚至需要誇張化以達到特定的戲劇效果。聲音工程師則會對錄製的聲音進行混音、增強、調整音量、添加混響或壓縮等後期處理，以確保其在最終作品中達到最佳的聽覺效果和敘事目的。這種藝術加工和技術處理導致媒體中出現了一種模式化、甚至有些刻板印象的「叫床聲」。這種模式化的聲音可能與個體真實的生理反應有所不同，但卻成為公眾普遍認知和期待的「性愉悅之聲」，甚至反過來影響了人們在現實中對性聲音的期待。例如，某些電影中女性高潮的聲音表現可能趨於單一化，而忽略了真實生理反應的多樣性。</li>
                 <li><strong>技術進步對聲音再現的影響：</strong> 錄音技術的發展，從模擬錄音到數字錄音，使得聲音捕捉更加精確，細節保留更完整。後期製作技術的進步，如多軌錄音、數字音頻工作站（DAW）的普及，則提供了更多聲音處理的可能性，包括聲音的合成、疊加、濾波和空間化等。這使得媒體能夠創造出更具沉浸感和衝擊力的聽覺體驗，例如通過環繞聲技術讓觀眾感覺身臨其境。同時，音效庫的發展也使得內容創作者可以便捷地獲取和使用標準化的「叫床聲」音效，進一步加劇了其模式化趨勢。</li>
             </ul>
@@ -287,7 +307,7 @@
                     <ul class="list-circle pl-6">
                         <li><strong>同意權與隱私侵犯：</strong> 未經充分知情同意而收集、使用他人的聲音數據進行AI訓練，或利用AI合成特定個人的「叫床聲」並進行傳播，是對個人隱私和聲音肖像權的嚴重侵犯。這不僅涉及數據倫理，更觸及個人尊嚴和安全。</li>
                         <li><strong>版權歸屬與知識產權：</strong> AI生成內容的版權問題仍是全球法律領域的空白。AI模型本身是否具有創造性？訓練數據的版權如何計算？使用AI工具的創作者是否擁有完全版權？這對內容產業的發展和創作者的權益保護帶來了新的挑戰。</li>
-                        <li><strong>誤用與濫用（深度偽造）的風險：</strong> AI生成此類敏感聲音可能被惡意行為者用於製造「深度偽造」（deepfake）音頻，進行誹謗、勒索、性騷擾、製造虛假證據、或在政治宣傳中進行操弄。這種濫用行為對受害者的名譽、隱私、心理健康造成毀滅性打擊，並可能破壞社會信任和公共秩序。</li>
+                        <li><strong>誤用與濫用（深度偽造）的風險：</strong> AI生成此類敏感聲音可能被惡意行為者用於製造「深度偽造」（deepfake）音頻，進行誹謗、勒索、性騷擾、製造虛假證據或政治操弄。這種濫用行為對受害者的名譽、隱私、心理健康造成毀滅性打擊，並可能破壞社會信任和公共秩序。</li>
                     </ul>
                 </li>
                 <li><strong>對性認知與親密關係的影響：</strong>
@@ -334,7 +354,7 @@
             </p>
             <ul class="list-disc pl-6">
                 <li><strong>跨文化比較研究：</strong> 探討不同文化背景下對「叫床聲」的感知差異、其在媒體中的再現模式，以及AI生成聲音在不同文化語境中的接受度、倫理考量差異。這有助於理解全球化背景下AI技術的文化適應性。</li>
-                <li><strong>長期社會影響的縱向研究：</strong> 追蹤AI生成性聲音內容的普及對個體性觀念、親密關係模式、情感表達方式和社會倫理規範的長期影響。這需要長期的社會學、心理學和人類學研究。</li>
+                <li><strong>長期社會影響的縱向研究：：</strong> 追蹤AI生成性聲音內容的普及對個體性觀念、親密關係模式、情感表達方式和社會倫理規範的長期影響。這需要長期的社會學、心理學和人類學研究。</li>
                 <li><strong>AI聲音識別與溯源技術的開發：</strong> 探索開發更精確的AI聲音識別技術，以區分人類與AI生成聲音，並建立聲音溯源機制，追蹤AI生成內容的來源，以應對深度偽造的挑戰。這需要計算機科學、音頻工程和數字取證領域的合作。</li>
                 <li><strong>倫理原則嵌入AI模型設計：</strong> 研究如何將倫理原則（如公平性、透明度、可解釋性、隱私保護）嵌入AI模型的設計、訓練和部署過程中，從技術層面減少偏見和濫用風險。這需要AI倫理學家和工程師的緊密合作。</li>
                 <li><strong>法律與政策制定：</strong> 呼籲各國政府和國際組織加速制定相關法律法規，規範AI生成聲音的生產、傳播和使用，明確版權歸屬，並建立有效的監管和執法機制，以保護個人隱私和合法權益。</li>
